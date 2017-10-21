@@ -69,3 +69,9 @@ extension URL {
         self = url
     }
 }
+
+extension URLSession {
+    public static let defaultSession: URLSession = {
+        return URLSession(configuration: URLSessionConfiguration.default)
+    }()
+}
