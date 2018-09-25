@@ -20,6 +20,7 @@
 		84ABE2351F89E2BC0057F3FF /* UITableView+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABE2341F89E2BC0057F3FF /* UITableView+PCExtensions.swift */; };
 		84D84CDF1F98534400D4569A /* URL+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D84CDE1F98534400D4569A /* URL+PCExtensions.swift */; };
 		84D84CE11F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D84CE01F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift */; };
+		84E6C2042159FA0E004C39D8 /* UIViewController+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6C2032159FA0E004C39D8 /* UIViewController+PCExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		84ABE2341F89E2BC0057F3FF /* UITableView+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+PCExtensions.swift"; sourceTree = "<group>"; };
 		84D84CDE1F98534400D4569A /* URL+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+PCExtensions.swift"; sourceTree = "<group>"; };
 		84D84CE01F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+PCExtensions.swift"; sourceTree = "<group>"; };
+		84E6C2032159FA0E004C39D8 /* UIViewController+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PCExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,18 +72,19 @@
 		84ABE22B1F89E27B0057F3FF /* ParticleExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				84A46E2C1F89E56D00C69396 /* IndexPath+PCExtensions.swift */,
-				84A46E2E1F89E5DA00C69396 /* String+PCExtensions.swift */,
 				84A46E301F89E7FD00C69396 /* Date+PCExtensions.swift */,
-				84A46E321F89E8ED00C69396 /* UIView+PCExtensions.swift */,
-				84ABE2341F89E2BC0057F3FF /* UITableView+PCExtensions.swift */,
-				84A46E361F89EA5600C69396 /* UIScreen+PCExtensions.swift */,
-				84A46E381F89EAE100C69396 /* UIControl+PCExtensions.swift */,
+				84A46E2C1F89E56D00C69396 /* IndexPath+PCExtensions.swift */,
+				84D84CE01F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift */,
+				84A46E2E1F89E5DA00C69396 /* String+PCExtensions.swift */,
+				84A46E3C1F89EBBB00C69396 /* UIButton+PCExtensions.swift */,
 				84A46E341F89E9E000C69396 /* UICollectionView+PCExtensions.swift */,
 				84A46E3A1F89EB9300C69396 /* UIColor+PCExtensions.swift */,
-				84A46E3C1F89EBBB00C69396 /* UIButton+PCExtensions.swift */,
+				84A46E381F89EAE100C69396 /* UIControl+PCExtensions.swift */,
+				84A46E361F89EA5600C69396 /* UIScreen+PCExtensions.swift */,
+				84ABE2341F89E2BC0057F3FF /* UITableView+PCExtensions.swift */,
+				84A46E321F89E8ED00C69396 /* UIView+PCExtensions.swift */,
+				84E6C2032159FA0E004C39D8 /* UIViewController+PCExtensions.swift */,
 				84D84CDE1F98534400D4569A /* URL+PCExtensions.swift */,
-				84D84CE01F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift */,
 				84ABE2361F89E2C10057F3FF /* Supporting Files */,
 			);
 			path = ParticleExtensions;
@@ -186,6 +189,7 @@
 				84A46E2F1F89E5DA00C69396 /* String+PCExtensions.swift in Sources */,
 				84A46E3D1F89EBBB00C69396 /* UIButton+PCExtensions.swift in Sources */,
 				84D84CE11F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift in Sources */,
+				84E6C2042159FA0E004C39D8 /* UIViewController+PCExtensions.swift in Sources */,
 				84A46E371F89EA5600C69396 /* UIScreen+PCExtensions.swift in Sources */,
 				84A46E331F89E8ED00C69396 /* UIView+PCExtensions.swift in Sources */,
 			);
