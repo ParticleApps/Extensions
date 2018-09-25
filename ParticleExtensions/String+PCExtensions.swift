@@ -23,7 +23,7 @@ extension NSAttributedString {
 
 extension String {
     public func stringByAppending(strings: [String]) -> String {
-        let mutableString = NSMutableString()
+        let mutableString = NSMutableString(string: self)
         for string in strings {
             mutableString.append(string)
         }
