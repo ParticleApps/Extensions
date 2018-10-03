@@ -21,3 +21,46 @@ extension NSMutableURLRequest {
         }
     }
 }
+
+extension URLRequest {
+    public func performForJSONDictionary(success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error?) -> Void?) {
+        let task = URLSession.defaultSession.dataTask(with: self) { (data, response, error) in
+            if let _ = data {
+                do {
+                    if let json  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as? Dictionary<String, Any> {
+                        success(json)
+                    }
+                    else {
+                        failure(error)
+                    }
+                } catch let error as NSError {
+                    failure(error)
+                }
+            }
+            else {
+                failure(error)
+            }
+        }
+        task.resume()
+    }
+    public func performForJSONArray(success: @escaping (Array<Any>) -> Void, failure: @escaping (Error?) -> Void?) {
+        let task = URLSession.defaultSession.dataTask(with: self) { (data, response, error) in
+            if let _ = data {
+                do {
+                    if let json  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as? Array<Any> {
+                        success(json)
+                    }
+                    else {
+                        failure(error)
+                    }
+                } catch let error as NSError {
+                    failure(error)
+                }
+            }
+            else {
+                failure(error)
+            }
+        }
+        task.resume()
+    }
+}
