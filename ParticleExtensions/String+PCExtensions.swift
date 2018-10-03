@@ -58,7 +58,7 @@ extension String {
             if spaces {
                 return String.init(format: "(%@) %@ - %@", firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
             }
-            return String.init(format: "(%@)%@-%@", firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
+            return String.init(format: "(%@) %@-%@", firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
         }
         else if number.count > 10 {
             let prefixCount = number.count-10
@@ -69,8 +69,13 @@ extension String {
             if spaces {
                 return String.init(format: "+%@ (%@) %@ - %@", firstNDigits as CVarArg, firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
             }
-            return String.init(format: "+%@(%@)%@-%@", firstNDigits as CVarArg, firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
+            return String.init(format: "+%@(%@) %@-%@", firstNDigits as CVarArg, firstThreeDigits as CVarArg, middleThreeDigits as CVarArg, lastFourDigits as CVarArg)
         }
         return number
+    }
+    public func isValidEmail() -> Bool {
+        let regularExpression = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate = NSPredicate(format:"SELF MATCHES %@", regularExpression)
+        return predicate.evaluate(with: self)
     }
 }
