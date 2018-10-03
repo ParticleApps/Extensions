@@ -46,6 +46,32 @@ extension UIViewController {
             showPhotoLibrary(delegate: delegate, mediaTypes: mediaTypes)
         }
     }
+    @objc public func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector:#selector(self.showKeyboardResponse(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(self.hideKeyboardResponse(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    //MARK: Keyboard Responders
+    @objc private func showKeyboardResponse(notification: NSNotification) {
+        let keyboardFrame: CGRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
+        let option = UIViewAnimationOptions(rawValue: UInt((notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+        let duration: TimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
+        
+        self.showKeyboard(keyboardHeight: keyboardFrame.height, animationDuration: duration, animationOptions: option)
+    }
+    @objc private func hideKeyboardResponse(notification: NSNotification) {
+        let keyboardFrame: CGRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
+        let option = UIViewAnimationOptions(rawValue: UInt((notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+        let duration: TimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
+        
+        self.hideKeyboard(keyboardHeight: keyboardFrame.height, animationDuration: duration, animationOptions: option)
+    }
+    public func hideKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIViewAnimationOptions) {
+        //MARK: Implement in subclass
+    }
+    public func showKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIViewAnimationOptions) {
+        //MARK: Implement in subclas
+    }
     
     //MARK: Helpers
     private func findTopViewController(viewController: UIViewController) -> UIViewController {
@@ -60,4 +86,3 @@ extension UIViewController {
         return findTopViewController(viewController: self)
     }
 }
-
