@@ -1,6 +1,6 @@
 # ParticleExtensions
-[![Version](https://img.shields.io/github/release/ParticleApps/Extensions.svg)](https://github.com/ParticleApps/Categories/releases)
-[![CocoaPods](https://img.shields.io/cocoapods/v/ParticleExtensions.svg)](https://cocoapods.org/pods/CloudAppSDK)
+[![Version](https://img.shields.io/github/release/ParticleApps/Extensions.svg)](https://github.com/ParticleApps/Extensions/releases)
+[![CocoaPods](https://img.shields.io/cocoapods/v/ParticleExtensions.svg)](https://cocoapods.org/pods/ParticleExtensions)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ParticleExtensions is a framework that adds convenience methods for common objects in UIKit & Foundation.
@@ -9,7 +9,7 @@ ParticleExtensions is a framework that adds convenience methods for common objec
 Simply add the following to your Podfile if you're using [CocoaPods](http://cocoapods.org):
 
 ``` ruby
-pod 'ParticleExtensions', :git => 'https://github.com/ParticleApps/Extensions.git'
+pod 'ParticleExtensions'
 ```
 
 or Cartfile if you're using [Carthage](https://github.com/Carthage/Carthage):
