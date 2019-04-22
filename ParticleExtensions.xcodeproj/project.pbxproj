@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		842DCDA9216ACFE30044BC68 /* UIScrollView+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DCDA8216ACFE30044BC68 /* UIScrollView+PCExtensions.swift */; };
 		842DCDAB216AD78E0044BC68 /* NSObject+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DCDAA216AD78E0044BC68 /* NSObject+PCExtensions.swift */; };
+		846A160B226E712D00539EAD /* UILayer+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A160A226E712D00539EAD /* UILayer+PCExtensions.swift */; };
 		84A46E2D1F89E56D00C69396 /* IndexPath+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A46E2C1F89E56D00C69396 /* IndexPath+PCExtensions.swift */; };
 		84A46E2F1F89E5DA00C69396 /* String+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A46E2E1F89E5DA00C69396 /* String+PCExtensions.swift */; };
 		84A46E311F89E7FD00C69396 /* Date+PCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A46E301F89E7FD00C69396 /* Date+PCExtensions.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		842DCDA8216ACFE30044BC68 /* UIScrollView+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+PCExtensions.swift"; sourceTree = "<group>"; };
 		842DCDAA216AD78E0044BC68 /* NSObject+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+PCExtensions.swift"; sourceTree = "<group>"; };
+		846A160A226E712D00539EAD /* UILayer+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayer+PCExtensions.swift"; sourceTree = "<group>"; };
 		84A46E2C1F89E56D00C69396 /* IndexPath+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+PCExtensions.swift"; sourceTree = "<group>"; };
 		84A46E2E1F89E5DA00C69396 /* String+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+PCExtensions.swift"; sourceTree = "<group>"; };
 		84A46E301F89E7FD00C69396 /* Date+PCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+PCExtensions.swift"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				84A46E341F89E9E000C69396 /* UICollectionView+PCExtensions.swift */,
 				84A46E3A1F89EB9300C69396 /* UIColor+PCExtensions.swift */,
 				84A46E381F89EAE100C69396 /* UIControl+PCExtensions.swift */,
+				846A160A226E712D00539EAD /* UILayer+PCExtensions.swift */,
 				84A46E361F89EA5600C69396 /* UIScreen+PCExtensions.swift */,
 				842DCDA8216ACFE30044BC68 /* UIScrollView+PCExtensions.swift */,
 				84ABE2341F89E2BC0057F3FF /* UITableView+PCExtensions.swift */,
@@ -199,6 +202,7 @@
 				84D84CE11F9BA94D00D4569A /* NSURLRequest+PCExtensions.swift in Sources */,
 				84E6C2042159FA0E004C39D8 /* UIViewController+PCExtensions.swift in Sources */,
 				84A46E371F89EA5600C69396 /* UIScreen+PCExtensions.swift in Sources */,
+				846A160B226E712D00539EAD /* UILayer+PCExtensions.swift in Sources */,
 				84A46E331F89E8ED00C69396 /* UIView+PCExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
