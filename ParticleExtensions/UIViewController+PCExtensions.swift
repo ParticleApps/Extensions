@@ -25,15 +25,15 @@ extension UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     func showImageOptions(delegate: UIImagePickerControllerDelegate, mediaTypes: [String]) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.default) { (action) in
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: UIAlertAction.Style.default) { (action) in
                 self.showPhotoLibrary(delegate: delegate, mediaTypes: mediaTypes)
             }
-            let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { (action) in
+            let cameraAction = UIAlertAction(title: "Camera", style: UIAlertAction.Style.default) { (action) in
                 self.showCamera(delegate: delegate, mediaTypes: mediaTypes)
             }
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action) in
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) in
                 //Dismiss
             }
             
@@ -47,29 +47,29 @@ extension UIViewController {
         }
     }
     @objc public func subscribeToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector:#selector(self.showKeyboardResponse(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(self.hideKeyboardResponse(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(self.showKeyboardResponse(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(self.hideKeyboardResponse(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     //MARK: Keyboard Responders
     @objc private func showKeyboardResponse(notification: NSNotification) {
-        let keyboardFrame: CGRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
-        let option = UIViewAnimationOptions(rawValue: UInt((notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
-        let duration: TimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
+        let keyboardFrame: CGRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        let option = UIView.AnimationOptions(rawValue: UInt((notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+        let duration: TimeInterval = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         
         self.showKeyboard(keyboardHeight: keyboardFrame.height, animationDuration: duration, animationOptions: option)
     }
     @objc private func hideKeyboardResponse(notification: NSNotification) {
-        let keyboardFrame: CGRect = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect
-        let option = UIViewAnimationOptions(rawValue: UInt((notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
-        let duration: TimeInterval = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! TimeInterval
+        let keyboardFrame: CGRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        let option = UIView.AnimationOptions(rawValue: UInt((notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+        let duration: TimeInterval = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         
         self.hideKeyboard(keyboardHeight: keyboardFrame.height, animationDuration: duration, animationOptions: option)
     }
-    public func hideKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIViewAnimationOptions) {
+    public func hideKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
         //MARK: Implement in subclass
     }
-    public func showKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIViewAnimationOptions) {
+    public func showKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
         //MARK: Implement in subclas
     }
     
