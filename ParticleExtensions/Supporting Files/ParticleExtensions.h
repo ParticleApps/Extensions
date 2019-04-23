@@ -6,7 +6,7 @@
 //  Copyright © 2017 Rocco Del Priore. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h> 
 
 //! Project version number for ParticleExtensions.
 FOUNDATION_EXPORT double ParticleExtensionsVersionNumber;

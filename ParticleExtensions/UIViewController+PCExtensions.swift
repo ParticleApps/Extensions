@@ -66,11 +66,11 @@ extension UIViewController {
         
         self.hideKeyboard(keyboardHeight: keyboardFrame.height, animationDuration: duration, animationOptions: option)
     }
-    public func hideKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
-        //MARK: Implement in subclass
-    }
-    public func showKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
+    @objc open func showKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
         //MARK: Implement in subclas
+    }
+    @objc open func hideKeyboard(keyboardHeight: CGFloat, animationDuration: TimeInterval, animationOptions: UIView.AnimationOptions) {
+        //MARK: Implement in subclass
     }
     
     //MARK: Helpers
