@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'ParticleExtensions'
-  spec.version               = '1.0.0'
+  spec.version               = '1.0.1'
   spec.summary               = 'Particle\'s Swift extensions.'
   spec.description           = 'Adds convenience methods for common objects in UIKit & Foundation.'
   spec.homepage              = 'https://github.com/ParticleApps/Extensions'

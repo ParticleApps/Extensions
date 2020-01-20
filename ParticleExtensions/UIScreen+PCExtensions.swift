@@ -15,9 +15,10 @@ public enum ScreenType: Int {
     case iPhone = 2
     case iPhonePlus = 3
     case iPhoneX = 4
-    case iPad = 5
-    case iPadPro = 6
-    case iPadProLarge = 7
+    case iPhoneXSMax = 5
+    case iPad = 6
+    case iPadPro = 7
+    case iPadProLarge = 8   
 }
 
 public extension UIScreen {
@@ -35,8 +36,9 @@ public extension UIScreen {
             case ...667 : return .iPhone
             case ...736 : return .iPhonePlus
             case ...812 : return .iPhoneX
+            case ...896 : return .iPhoneXSMax
             default:
-                return .iPad
+                return .iPhone
             }
         }
         else if UI_USER_INTERFACE_IDIOM() == .pad {
@@ -45,7 +47,7 @@ public extension UIScreen {
             case ...1112 : return .iPadPro
             case ...1366 : return .iPadProLarge
             default:
-                return .iPhone
+                return .iPad
             }
         }
         return .iPhone
