@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIColor {
-    public convenience init(hex: Int32) {
-        self.init(hex: hex, alpha: 1)
+    public convenience init(hex: String) {
+        self.init(hex: Int32(hex, radix:16) ?? Int32("00000000", radix: 16)!, alpha: 1)
     }
     public convenience init(hex: Int32, alpha: CGFloat) {
         let r = CGFloat(hex >> 16 & 0xFF) / 255

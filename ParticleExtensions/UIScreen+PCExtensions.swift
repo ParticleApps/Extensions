@@ -52,5 +52,20 @@ public extension UIScreen {
         }
         return .iPhone
     }
+    
+    class func homeBarHeight() -> CGFloat {
+        switch UIScreen.type() {
+        case .iPhoneX:
+            return 34.0
+        case .iPhoneXSMax:
+            return 34.0
+        case .iPadPro:
+            return 34.0
+        case .iPadProLarge:
+            return 34.0
+        default:
+            return 0.0
+        }
+    }
 }
 

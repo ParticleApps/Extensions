@@ -22,6 +22,7 @@ extension UIView {
             self.addSubview(view)
         }
     }
+    
     public func findAndResignFirstResponder() -> Bool {
         if self.isFirstResponder {
             self.resignFirstResponder()
@@ -33,5 +34,16 @@ extension UIView {
             }
         }
         return false
+    }
+    
+    public func roundCorners(radius: CGFloat = 5.0) {
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+    
+    public func layoutSubviews(animationDuration: TimeInterval) {
+        UIView.animate(withDuration: animationDuration) {
+            self.layoutSubviews()
+        }
     }
 }
